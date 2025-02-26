@@ -1,10 +1,61 @@
 
 /* Your CSS Code here. */
- .box {
-            width: 300px;
-            background-color: lightblue;
-            border: 15px solid blue;
-            padding: 50px;
+.container {
+            width: fit-content;
             margin: 20px;
-            box-sizing: border-box; /* Ensures total width is 300px */
+            padding: 20px;
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        .box {
+            width: 300px;
+            padding: 50px;
+            border: 15px solid blue;
+            background-color: lightblue;
+            box-sizing: border-box;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            position: relative;
+        }
+
+        .box::before {
+            content: "padding 50px";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 14px;
+            color: black;
+        }
+
+        .box::after {
+            content: "color lightblue";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 14px;
+            color: black;
+        }
+
+        .border-label {
+            position: absolute;
+            top: -30px;
+            left: 10px;
+            font-size: 14px;
+            color: black;
+        }
+
+        .width-label {
+            display: block;
+            margin-top: 20px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .margin-label {
+            position: absolute;
+            top: -50px;
+            left: 10px;
+            font-size: 14px;
+            color: black;
         }
