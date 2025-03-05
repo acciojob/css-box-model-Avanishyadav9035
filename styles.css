@@ -1,9 +1,61 @@
 
 /* Your CSS Code here. */
-  .box {
+          .container {
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .outer-box {
+            background-color: blue;
+            padding: 50px;
+        }
+
+        .inner-box {
             width: 300px;
             background-color: lightblue;
             border: 15px solid blue;
             padding: 50px;
-            margin: 20px;
+            position: relative;
+        }
+
+        .inner-box::before {
+            content: "padding 50px";
+            position: absolute;
+            top: 0;
+            left: 10px;
+            font-weight: bold;
+        }
+
+        .inner-box::after {
+            content: "color lightblue";
+            position: absolute;
+            top: 0;
+            right: 10px;
+            font-weight: bold;
+        }
+
+        .content {
+            border: 1px dashed black;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        .content::before {
+            content: "<------------------ width 300px ------------------>";
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: bold;
+        }
+
+        .border-text {
+            position: absolute;
+            top: -30px;
+            left: 10px;
+            font-weight: bold;
         }
